@@ -167,7 +167,7 @@ open class Legend: ComponentBase
             guard let label = entry.label
                 else { continue }
             
-            let size = (label as NSString!).size(withAttributes: [NSAttributedString.Key.font: font])
+            let size = (label as! NSString).size(withAttributes: [NSAttributedString.Key.font: font])
             
             if size.width > maxW
             {
@@ -343,7 +343,7 @@ open class Legend: ComponentBase
                 // grouped forms have null labels
                 if label != nil
                 {
-                    calculatedLabelSizes[i] = (label as NSString!).size(withAttributes: labelAttrs)
+                    calculatedLabelSizes[i] = (label as! NSString).size(withAttributes: labelAttrs)
                     requiredWidth += drawingForm ? formToTextSpace + formSize : 0.0
                     requiredWidth += calculatedLabelSizes[i].width
                 }
