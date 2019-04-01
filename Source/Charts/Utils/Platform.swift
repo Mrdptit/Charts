@@ -191,7 +191,7 @@ types are aliased to either their UI* implementation (on iOS) or their NS* imple
 
 	func NSUIImagePNGRepresentation(_ image: NSUIImage) -> Data?
     {
-		return image.pngData(image)
+		return image.pngData()
 	}
 
 	func NSUIImageJPEGRepresentation(_ image: NSUIImage, _ quality: CGFloat = 0.8) -> Data?
